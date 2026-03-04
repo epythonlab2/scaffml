@@ -32,6 +32,19 @@ It provides:
 
 ## 🛠️ Installation
 
+Create directory:
+
+``bash
+mkdir your_root_project_name
+cd your_root_project_name
+```
+
+Activate vertual Env(Recommended)
+```bash
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+```
+
 Install via pip:
 
 ```bash

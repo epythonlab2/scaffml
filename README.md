@@ -34,12 +34,12 @@ It provides:
 
 Create directory:
 
-``bash
+```bash
 mkdir your_root_project_name
 cd your_root_project_name
 ```
 
-Activate vertual Env(Recommended)
+Activate vertual Env(Recommended):
 ```bash
 python -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate

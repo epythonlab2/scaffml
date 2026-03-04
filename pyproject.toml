@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scaffml"
+version = "0.2.0"
+description = "Professional ML Project Structure Generator"
+readme = "README.md"
+authors = [{ name = "Asibeh Tenager" }]
+requires-python = ">=3.10"
+dependencies = [
+    "typer>=0.9.0",
+    "jinja2>=3.1",
+    "pyyaml>=6.0",
+    "rich>=13.0"
+]
+
+[project.scripts]
+scaffml = "scaffml.cli:app"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["scaffml*"]
+
+[tool.setuptools.package-data]
+scaffml = [
+    "templates/ml_project/structure.yaml",
+    "templates/ml_project/files/*"
+]

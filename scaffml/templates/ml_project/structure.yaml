@@ -1,0 +1,45 @@
+# scaffml/templates/ml_project/structure.yaml
+app:
+  api:
+    __init__.py: file
+    routes: { prediction.py: file }
+    main.py: file
+    schemas.py: file
+  pipelines: {}
+  services: {}
+
+  core:
+    __init__.py: file
+    config.py: file
+    logger.py: file
+
+data:
+  raw: {}
+  processed: {}
+  external: {}
+
+notebooks: {}
+models: {}
+
+src:
+  __init__.py: file
+  data: {__init__.py: file, loader.py: file, preprocessing.py: file }
+  features: {__init__.py: file, build_features.py: file }
+  models: {__init__.py: file, train.py: file, predict.py: file }
+  utils: {__init__.py: file}
+
+tests:
+  __init__.py: file
+  test_api.py: file
+  test_data.py: file
+
+.github:
+  workflows:
+    ci.yml: file
+    
+__init__.py: file
+.gitignore: file
+Dockerfile: file
+requirements.txt: file
+README.md: file
+pyproject.toml: file

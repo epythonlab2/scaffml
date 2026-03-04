@@ -1,0 +1,62 @@
+# ----------------------
+# Python & Build
+# ----------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+build/
+dist/
+{{ project_name }}.egg-info/
+
+# ----------------------
+# Virtual Environments
+# ----------------------
+.venv/
+venv/
+env/
+ENV/
+
+# ----------------------
+# Data & Models (Standard ML Practice)
+# ----------------------
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/external/*
+!data/external/.gitkeep
+models/*
+!models/.gitkeep
+*.h5
+*.pt
+*.pth
+*.onnx
+*.pkl
+*.joblib
+
+# ----------------------
+# Logs & Testing
+# ----------------------
+logs/
+*.log
+.coverage
+coverage.xml
+htmlcov/
+.pytest_cache/
+
+{% if include_docker %}
+# ----------------------
+# Docker
+# ----------------------
+*.tar
+{% endif %}
+
+# ----------------------
+# IDE & OS
+# ----------------------
+.vscode/
+.idea/
+.DS_Store
